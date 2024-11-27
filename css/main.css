@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+    font-family: 'Croissant One', cursive;   
+}
+
+/* start styel header */
+header{
+    position:absolute;
+    z-index: 10;
+    top: 25%;
+    left:20%;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 25% 40% 3% ;
+    grid-column-gap: 100px; 
+}
+.logo h3{
+    font-size: 20px;
+    color: white;
+}
+.logo span{
+    color: palevioletred;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+    font-size: 20px;
+}
+/* end styel header*/
+
+.home-text h3{
+    position: absolute;
+    left: 13%;
+    top: 30%;
+    font-size: 20px;
+    color: white;
+}
+.home-text button {
+    position: absolute;
+    left: 13%;
+    top: 65%;
+}
+.home-text p {
+    position: absolute;
+    left: 13%;
+    top: 45%;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+.button {
+    --color: palevioletred;
+    padding:15px;
+    background-color: transparent;
+    border-radius: .3em;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+    font-size: 20px;
+    border: 1px solid;
+    color: var(--color);
+    z-index: 1;
+}
+
+.button::before,
+.button::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--color);
+    transition: 1s ease;
+}
+
+.button::before {
+    top: -1em;
+    left: -1em;
+}
+
+.button::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+}
+
+.button:hover::before,
+.button:hover::after {
+    height: 410px;
+    width: 410px;
+}
+
+.button:hover {
+    color: rgb(255, 255, 255);
+}
+
+.button:active {
+    filter: brightness(.8);
+}
+.home-icon{
+    font-size: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column; 
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+.home-icon i{
+    margin-top: 10px;
+}
+.home-icon i:hover{
+    color: blueviolet;
+}
+/* start styel section home */
+.home{
+    display: flex;
+    position: relative;
+}
+.home-backGround-1{
+    width: 65%;
+    height: 100vh;
+    position: relative;
+    background-color:blueviolet;   
+}
+.home-backGround-2 {
+    width: 35%;
+    height: 100vh;
+    position: relative;
+    background-color: palevioletred; 
+}
+
+.home-backGround-3 {
+    width: 80%;
+    height: 70vh;
+    position: absolute;
+    top: 20%;
+    left:200px;
+    background-color: blueviolet;
+    box-shadow: 5px 5px 18px rgb(0, 0, 0);
+
+
+}
+.home-backGround-4 {
+    width: 70%;
+    height: 70vh;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    background-color: palevioletred;
+    box-shadow: 5px 5px 18px rgb(0, 0, 0);
+}
+/* end styel section home */
+
+/* start styel animation */
+.animation {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.5s linear forwards;
+}
+
+@keyframes moveup {
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/* end styel animation */
